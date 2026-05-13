@@ -1,4 +1,4 @@
-fastapi==0.111.0
+--extra-index-url https://download.pytorch.org/whl/cpufastapi==0.111.0
 uvicorn==0.29.0
 torch
 numpy==1.26.4
