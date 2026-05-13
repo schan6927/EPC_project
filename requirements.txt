@@ -1,6 +1,6 @@
 fastapi==0.111.0
 uvicorn==0.29.0
-torch==2.1.0
+torch
 numpy==1.26.4
 pandas==2.2.2
 scikit-learn==1.4.2
