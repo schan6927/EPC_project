@@ -560,6 +560,16 @@ async def api_risk_post(body: RiskPayload):
 def api_weather():
     return jresp(fetch_weather())
 
+@app.get("/debug/scaler")
+def debug_scaler():
+    if CKPT is None:
+        return {"error": "모델 없음"}
+    wri_sc = CKPT["wri_scaler"]
+    return {
+        "wri_feature_min":  wri_sc.data_min_.tolist(),
+        "wri_feature_max":  wri_sc.data_max_.tolist(),
+        "wri_feature_names": WRI_COLS,
+    }
 
 @app.get("/")
 def health():
