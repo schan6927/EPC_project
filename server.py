@@ -27,7 +27,7 @@ from typing import Optional
 HORMUZ_LAT   = 26.5
 HORMUZ_LON   = 56.3
 DEVICE       = torch.device("cpu")
-MODEL_PATH   = os.getenv("MODEL_PATH", "models/hormuz_model.pt")
+MODEL_PATH   = os.getenv("MODEL_PATH", "hormuz_model.pt")
 SUPABASE_URL = os.getenv("SUPABASE_URL", "https://rge5skpht6w7nv75u6sf.helloreaddy.com")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY", "sb_publishable_tLRha2DTpBR0qswPbOEaswHHVlcT1Baw")
 
