@@ -235,7 +235,7 @@ def infer(wri_vals, cri_vals):
     ca=CKPT["cri_scaler"].transform(np.tile(cri_vals,(30,1)).astype(np.float32))
     with torch.no_grad():
         pw,pc=MODEL(torch.tensor(wa).unsqueeze(0),torch.tensor(ca).unsqueeze(0))
-    return round(float(np.clip(pw.item(),0,100)),2), round(float(np.clip(pc.item(),0,100)),2)
+    return round(float(np.clip(pw.item()*100,0,100)),2), round(float(np.clip(pc.item()*100,0,100)),2)
 
 def payout(v, thr):
     if v>=thr+15: return {"level":"완전차단","payout_rate":1.00,"color":"red"}
